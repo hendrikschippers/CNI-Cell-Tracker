@@ -15,8 +15,7 @@ The measurement data consits of three different log types: the combined log, the
 
 In addition to that the result of the to-String-method of the SignalStrength class and the CellInfo class are logged seperately. The json log of the conducted iPerf measurements is also included.
 
-## Installation of the Application
-To be able to use this application, the provided code needs to be compiled. For this, Android Studio can be used. 
-
+## Installation
+Please follow the [Install](../INSTALL.md) guide, install the application.
 
 
