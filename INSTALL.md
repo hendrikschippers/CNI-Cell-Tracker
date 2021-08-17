@@ -103,8 +103,8 @@ Added after line 3759
 double tempEndTime = (double)et;
 double tempDuration = (double) irp->interval_duration;
 if(test->test_End_Delay_Reached){
-	tempEndTime =tempEndTime- test->test_End_Delay/1000.0;
-	tempDuration = tempDuration- test->test_End_Delay/1000.0;
+  tempEndTime =tempEndTime- test->test_End_Delay/1000.0;
+  tempDuration = tempDuration- test->test_End_Delay/1000.0;
 }
 ```
 Changed line 3764-3794 to
@@ -128,23 +128,23 @@ if (sp->sender) {
   if (test->json_output)
     cJSON_AddItemToArray(json_interval_streams, iperf_json_printf("socket: %d  start: %f  end: %f  seconds: %f  bytes: %d  bits_per_second: %f  packets: %d  omitted: %b sender: %b", (int64_t) sp->socket, (double) st, tempEndTime, tempDuration, (int64_t) irp->bytes_transferred, bandwidth * 8, (int64_t) irp->interval_packet_count, irp->omitted, sp->sender));  
   else
-		iperf_printf(test, report_bw_udp_sender_format, sp->socket, mbuf, st, tempEndTime, ubuf, nbuf, zbuf, irp->interval_packet_count, irp->omitted?report_omitted:"");
-	} else {
-	    if (irp->interval_packet_count > 0) {
-	    	lost_percent = 100.0 * irp->interval_cnt_error / irp->interval_packet_count;
-	    }
-	    else {
-		    lost_percent = 0.0;
-	    }
-	    if (test->json_output)
-		cJSON_AddItemToArray(json_interval_streams, iperf_json_printf("socket: %d  start: %f  end: %f  seconds: %f  bytes: %d  bits_per_second: %f  jitter_ms: %f  lost_packets: %d  packets: %d  lost_percent: %f  omitted: %b sender: %b", (int64_t) sp->socket, (double) st, tempEndTime, tempDuration, (int64_t) irp->bytes_transferred, bandwidth * 8, (double) irp->jitter * 1000.0, (int64_t) irp->interval_cnt_error, (int64_t) irp->interval_packet_count, (double) lost_percent, irp->omitted, sp->sender));
-	    else
-		iperf_printf(test, report_bw_udp_format, sp->socket, mbuf, st, tempEndTime, ubuf, nbuf, irp->jitter * 1000.0, irp->interval_cnt_error, irp->interval_packet_count, lost_percent, irp->omitted?report_omitted:"");
+    iperf_printf(test, report_bw_udp_sender_format, sp->socket, mbuf, st, tempEndTime, ubuf, nbuf, zbuf, irp->interval_packet_count, irp->omitted?report_omitted:"");
+} else {
+    if (irp->interval_packet_count > 0) {
+    	lost_percent = 100.0 * irp->interval_cnt_error / irp->interval_packet_count;
+    }
+    else {
+	    lost_percent = 0.0;
+    }
+    if (test->json_output)
+	cJSON_AddItemToArray(json_interval_streams, iperf_json_printf("socket: %d  start: %f  end: %f  seconds: %f  bytes: %d  bits_per_second: %f  jitter_ms: %f  lost_packets: %d  packets: %d  lost_percent: %f  omitted: %b sender: %b", (int64_t) sp->socket, (double) st, tempEndTime, tempDuration, (int64_t) irp->bytes_transferred, bandwidth * 8, (double) irp->jitter * 1000.0, (int64_t) irp->interval_cnt_error, (int64_t) irp->interval_packet_count, (double) lost_percent, irp->omitted, sp->sender));
+    else
+	iperf_printf(test, report_bw_udp_format, sp->socket, mbuf, st, tempEndTime, ubuf, nbuf, irp->jitter * 1000.0, irp->interval_cnt_error, irp->interval_packet_count, lost_percent, irp->omitted?report_omitted:"");
 ```
 Changed line 3832 to
 ```c++
 snprintf(template, sizeof(template) / sizeof(char), "%s/iperf3.XXXXXX", tempdir);
-		iperf_err(test, "parameter error - %s", template);
+iperf_err(test, "parameter error - %s", template);
 ```
 Added after line 3844
 ```c++
