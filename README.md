@@ -5,11 +5,12 @@ The **CNI-Cell-Tracker** is an Android application that can be used for active a
 
 An extensive measurement campaign has been conducted with the help of this application. The resulting logs are located in the folder *measurements*
 ## Usage of the Provided Measurement Data
-The measurement data consits of three different logs: the combined log, the cell log, the neighboring cell log, the ping log and the iPerf transfer log. 
+The measurement data consits of three different log types: the combined log, the cell log, the neighboring cell log, the ping log and the iPerf transfer log. 
 
--__CellLog:__ Contains all informations available about the currently connected mobile cell.  
--**PingLog:** Contains the latency informations gained by the `ping` command.  
--**Iperf transfer log:** Contains the data rate measurements conducted with iPerf.  
+-__Cell Log:__ Contains all informations available about the currently connected mobile cell.  
+-**Neighboring Cell Log:** Contains all informations available about neighboring mobile network cells.  
+-**Ping Log:** Contains the latency informations gained by the `ping` command.  
+-**Iperf Transfer Log:** Contains the data rate measurements conducted with iPerf.  
 -**CombinedLog:** Contains a merged version of all logs. The temporal resolution is limited by the data rate measurements.  
 
 In addition to that the result of the to-String-method of the SignalStrength class and the CellInfo class are logged seperately. The json log of the conducted iPerf measurements is also included.
