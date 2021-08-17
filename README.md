@@ -1,16 +1,27 @@
 # CNI-Cell-Tracker
 !!!! Work in Progress !!!!
 
-The **CNI-Cell-Tracker** is an Android application that can be used for active and passive mobile network measurements. It is able to display and log network, mobility informations provided by the Android API. In addition to that, data rate measurements using **iPerf** and latency measurements can be periodically executed. The obatained data is than save to several comma-seperated-value(.csv) files.
+The **CNI-Cell-Tracker** is an Android application that can be used for active and passive mobile network measurements. It is able to display and log network, mobility informations provided by the Android API. In addition to that, data rate measurements using **iPerf** and latency measurements can be periodically executed. The obatained data can then save to several comma-seperated-value(.csv) files.
 
-## Installation of the application
+An extensive measurement campaign has been conducted with the help of this application. The resulting logs are located in the folder *measurements*
+## Usage of the Provided Measurement Data
+The measurement data consits of three different logs: the combined log, the cell log, the neighboring cell log, the ping log and the iPerf transfer log. 
+
+-__CellLog:__ Contains all informations available about the currently connected mobile cell.  
+-**PingLog:** Contains the latency informations gained by the `ping` command.  
+-**Iperf transfer log:** Contains the data rate measurements conducted with iPerf.  
+-**CombinedLog:** Contains a merged version of all logs. The temporal resolution is limited by the data rate measurements.  
+
+In addition to that the result of the to-String-method of the SignalStrength class and the CellInfo class are logged seperately. The json log of the conducted iPerf measurements is also included.
+
+## Installation of the Application
 To be able to use this application, the provided code needs to be compiled. For this, Android Studio can be used. 
 
 
-### Embedding iPerf into the application
+### Embedding iPerf into the Application
 If the speed-test functionality should also be used, a compiled version of iPerf is also mandatory. The iPerf binaries are not contained in this repository.
 
-#### Changes applied to iPerf
+#### Changes Applied to iPerf
 The used version of iPerf in this application was slighly changed for the use case of mobile data rate measurements. 
 These include the following changes: 
 1. Created an option to pass the path iPerf should use for caching. 
@@ -188,9 +199,9 @@ To compile iPerf, the following steps were done:
 
 After these steps, the compiled binary files of iperf are located in the binary folder. They are generated for the architectures arm64, armeabi-v7a, x86 and x86_64.
 
-#### Add the compiled Iperf to the Android App
+#### Add the iPerf Binaries to the Android Application
 The compiled iPerf binaries should now be copied to the jniLibs folder in the Android Studio project. The iPerf binaries for all architectures have to be renamed into "libIperf3.9.so". 
 
-#### Compile the Android Application
+#### Run the Android Application
 Open the Android Studio Project. Wait until everything has been loaded. Then go to "Build->Make Project". After that you can run the application, given you have connected a Android smartphone to the computer that has enabled the developer mode .
 
