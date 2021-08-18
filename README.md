@@ -1,9 +1,10 @@
 # CNI-Cell-Tracker
 !!!! Work in Progress !!!!
 
-The **CNI-Cell-Tracker** is an Android application that can be used for active and passive mobile network measurements. It is able to display and log network, mobility informations provided by the Android API. In addition to that, data rate measurements using **iPerf** and latency measurements can be periodically executed. The obatained data can then be saved to several comma-seperated value(.csv) files.
+The **CNI-Cell-Tracker** is an Android application that can be used for active and passive mobile network measurements. It is able to display and log network and mobility informations provided by the Android API. In addition to that, data rate measurements using **iPerf** and latency measurements can be periodically executed. The obatained data can be saved to several comma-seperated value(.csv) files.
 
-An extensive measurement campaign has been conducted with the help of this application. The resulting logs are located in the folder *measurements*
+An extensive 5G NSA measurement campaign has been conducted with the help of this application. The resulting logs are located in the folder *measurements*. These can be used for machine learning and statistical analysis. 
+
 ## Usage of the Provided Measurement Data
 The measurement data consits of three different log types: the combined log, the cell log, the neighboring cell log, the ping log and the iPerf transfer log. 
 
