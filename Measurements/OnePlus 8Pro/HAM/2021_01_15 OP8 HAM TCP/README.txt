@@ -1,0 +1,1 @@
+Handy in Energiesparmodus bis kurz vor ende der Messung. Weniger 5G dewwegen?
