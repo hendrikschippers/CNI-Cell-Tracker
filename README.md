@@ -25,4 +25,22 @@ The application needs several permissions. They need to be granted by the user.
 When started, an overview of several measured variables like reference signals are shown. At the bottom of the screen, it can be selected which data should be logged. It can be chosen between "Cell Tracking", "GPS Tracking", "Speed Test" and "Ping Test". Multiple options can be chosen.  By the click of the "Tracking on" button, the logging can be started.  
 In the setting that are accessible at the top, the logging duration, the used iPerf server and several more options can be set. 
 
+## Acknowledgements
+To acknowledge us in your publication(s) please refer to the following publication:
+
+```tex
+@InProceedings{Sliwa2021machine,
+    Author = {Benjamin Sliwa and Hendrik Schippers and Christian Wietfeld},
+    Title = {Machine Learning-Enabled Data Rate Prediction for {5G} {NSA} Vehicle-to-Cloud Communications},
+    Booktitle = {IEEE 4th 5G World Forum (5GWF) (WF-5G'21)},
+    Year = {2021},
+    Address = {Virtual},
+    Month = {Oct},
+    Publisher = {IEEE},
+    pages={299-304},
+    doi={10.1109/5GWF52925.2021.00059}
+}
+```
+
+You can download the author's version via this [link](https://cni.etit.tu-dortmund.de/storages/cni-etit/r/Research/Publications/2021/Sliwa_5GWF/Sliwa_5GWF_10_2021.pdf).
 
